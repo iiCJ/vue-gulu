@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <title>轮子</title>
     <style>
-        *{margin: 0;padding: 0;box-sizing: border-box;}
-        :root{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
             --button-height: 32px;
             --font-size: 14px;
             --button-bg: white;
@@ -15,18 +20,37 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
         #app {
             margin: 20px;
         }
+
         body {
             font-size: var(--font-size);
         }
     </style>
+    <style>
+
+    </style>
 </head>
 <body>
 <div id="app">
-    <g-button></g-button>
+    <g-button icon="xiazai" icon-position="right">
+        按钮
+    </g-button>
+    <g-button icon="dianzan" icon-position="left">
+        按钮
+    </g-button>
+    <g-button icon="xiazai" :loading="loading1" @click="loading1 = !loading1">
+        按钮
+    </g-button>
+    <g-button-group>
+        <g-button icon="zuo">上一页</g-button>
+        <g-button icon="xia"></g-button>
+        <g-button icon="you" icon-position="right">下一页</g-button>
+    </g-button-group>
 </div>
 <script src="src/app.js"></script>
+<script src="//at.alicdn.com/t/font_818927_him2vvc0hcb.js"></script>
 </body>
 </html>
