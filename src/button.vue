@@ -1,15 +1,20 @@
 <template xmlns="">
     <button class="g-button" :class="`icon-${iconPosition}`"
-    @click="$emit('click')">
-        <g-icon  class="icon" v-if="icon && !loading" :name="icon"></g-icon>
-        <g-icon  class="icon loading" v-if="loading" name="jiazai"></g-icon>
+            @click="$emit('click')">
+        <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
+        <g-icon class="icon loading" v-if="loading" name="jiazai"></g-icon>
         <div class="content">
             <slot/>
         </div>
     </button>
 </template>
 <script>
+    import Icon from './icon'
+
     export default {
+        components: {
+            'g-icon': Icon
+        },
         props: {
             icon: {},
             iconPosition: {

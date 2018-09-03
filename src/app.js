@@ -27,6 +27,7 @@ chai.use(spies)
         }
     })
     vm.$mount()
+    console.log(vm)
     let useElement = vm.$el.querySelector('use')
     let href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#i-shezhi')

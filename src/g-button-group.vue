@@ -1,11 +1,16 @@
 <template>
     <div class="g-button-group">
-        <slot />
+        <slot/>
     </div>
 </template>
 
 <script>
+    import Button from './button'
+
     export default {
+        components: {
+            'g-button': Button
+        },
         mounted() {
             for (let node of this.$el.children) {
                 let name = node.nodeName.toLowerCase()
