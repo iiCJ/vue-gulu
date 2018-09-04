@@ -8,6 +8,7 @@
     import Button from './button'
 
     export default {
+        name: 'button-group',
         components: {
             'g-button': Button
         },
@@ -22,7 +23,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .g-button-group {
         display: inline-flex;
         vertical-align: middle;

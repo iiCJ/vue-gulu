@@ -18,11 +18,7 @@ describe('Button', () => {
             }
         });
         vm.$mount()
-        console.log('vm')
-        console.log(vm.$el)
         const useElement = vm.$el.querySelector('use')
-        console.log('useElement')
-        console.log(useElement)
         expect(useElement.getAttribute('xlink:href')).to.equal('#i-shezhi')
         vm.$destroy()
     })

@@ -28,6 +28,9 @@
         body {
             font-size: var(--font-size);
         }
+        .box{
+            margin: 20px;
+        }
     </style>
     <style>
 
@@ -35,6 +38,14 @@
 </head>
 <body>
 <div id="app">
+    <div class="box">
+    <g-input value="zhangsan"></g-input>
+    <g-input value="lisi" disabled ></g-input>
+    <g-input value="wangwu" readonly ></g-input>
+    <g-input v-model="message" error="baocuole!"></g-input>
+        <p>{{message}}</p>
+    </div>
+    <div class="box">
     <g-button icon="xiazai" icon-position="right">
         按钮
     </g-button>
@@ -49,9 +60,8 @@
         <g-button icon="xia"></g-button>
         <g-button icon="you" icon-position="right">下一页</g-button>
     </g-button-group>
-    <div id="test"></div>
+    </div>
 </div>
 <script src="src/app.js"></script>
-<script src="//at.alicdn.com/t/font_818927_him2vvc0hcb.js"></script>
 </body>
 </html>
