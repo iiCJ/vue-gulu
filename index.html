@@ -31,6 +31,22 @@
         .box{
             margin: 20px;
         }
+        .demo{
+            min-height: 100px;
+        }
+        .sider{
+            background: #333333;
+            width: 100px;
+        }
+        .header{
+            background: #F1453D;
+        }
+        .footer{
+            background: green;
+        }
+        .content{
+            background: antiquewhite;
+        }
     </style>
     <style>
 
@@ -38,7 +54,16 @@
 </head>
 <body>
 <div id="app">
-    <div class="" style="border: 1px solid red">
+
+    <g-layout  style="height: 100vh;">
+        <g-sider class="demo">sider</g-sider>
+        <g-layout>
+            <g-header class="demo">header</g-header>
+            <g-content  class="demo">content</g-content>
+            <g-footer  class="demo">footer</g-footer>
+        </g-layout>
+    </g-layout>
+    <!--<div class="" style="border: 1px solid red">
     <g-row  align="right">
         <g-col span="6" :ipad="{span:12,offset:0}">1</g-col>
         <g-col span="14" :ipad="{span:12,offset:0}">2</g-col>
@@ -83,7 +108,7 @@
         <g-button icon="xia"></g-button>
         <g-button icon="you" icon-position="right">下一页</g-button>
     </g-button-group>
-    </div>
+    </div>-->
 </div>
 <script src="src/app.js"></script>
 </body>
